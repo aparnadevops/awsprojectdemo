@@ -22,7 +22,7 @@
 			<id>nexus</id>
 			<name>Snapshot Repository</name>
 			<url>http://18.218.223.1:8081/repository/maven-snapshots/</url>
-		</snapshotrepository>
+		</snapshotRepository>
 	</distributionManagement>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
