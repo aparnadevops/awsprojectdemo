@@ -12,6 +12,17 @@
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 	</properties>
+	<distributionmanagement>
+		<repository>
+			<id>nexus</id>
+			<name>Release Repository</name>
+			<url>http://18.218.223.1:8081/repository/maven-releases/</url>
+		</repository>
+		<snapshotrepository>
+			<id>nexus</id>
+			<name>Snapshot Repository</name>
+			<url>http://18.218.223.1:8081/repository/maven-snapshots/</url>
+		</snapshotrepository>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
