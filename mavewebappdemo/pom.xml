@@ -8,7 +8,7 @@
 	<name>mavewebappdemo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<sonar.host.url>http://18.218.223.1:9000</sonar.host.url>
+		<sonar.host.url>http://18.219.94.39:9000</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 	</properties>
@@ -16,12 +16,12 @@
 		<repository>
 			<id>nexus</id>
 			<name>Release Repository</name>
-			<url>http://18.218.223.1:8081/repository/maven-releases/</url>
+			<url>http://18.219.94.39:8081/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>Snapshot Repository</name>
-			<url>http://18.218.223.1:8081/repository/maven-snapshots/</url>
+			<url>http://18.219.94.39:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<dependencies>
