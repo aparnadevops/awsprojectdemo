@@ -1,32 +1,32 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'string1', defaultValue: 'string', description: 'Hello world')
 
+        text(name: 'Demo', defaultValue: '', description: 'Demo parameter')
+
+        booleanParam(name: 'Boolean', defaultValue: true, description: 'Boolean value')
+
+        choice(name: 'CHOICE', choices: ['A', 'B', 'C'], description: 'Choose one')
+
+        password(name: 'PASSWORD', defaultValue: 'Key', description: 'Enter a password')
+
+        file(name: "FILE", description: "file to upload")
+    }
     stages {
-        stage ('Build Stage') {
-
+        stage('Example') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean install'
-                }
-            }
-        }
+                echo "Hello ${params.string1}"
 
-        stage ('Testing Stage') {
+                echo "Biography: ${params.Demo}"
 
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn test'
-                }
-            }
-        }
+                echo "Toggle: ${params.Boolean }"
 
+                echo "Choice: ${params.CHOICE}"
 
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
+                echo "Password: ${params.PASSWORD}"
             }
         }
     }
+
 }
